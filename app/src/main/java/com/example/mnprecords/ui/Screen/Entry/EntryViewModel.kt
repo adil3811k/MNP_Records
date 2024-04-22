@@ -47,6 +47,6 @@ fun RecodeUIState.toMNPRecode():MNPRecode{
         jio=this.jio,
         VI=this.VI,
         Airtel =this.Airtel,
-        UIBalance = this.ULBalance.toInt()
+        UIBalance = this.ULBalance.toInt(),
     )
 }

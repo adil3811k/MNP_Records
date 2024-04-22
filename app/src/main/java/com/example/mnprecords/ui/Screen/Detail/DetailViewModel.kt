@@ -41,7 +41,7 @@ class DetailViewModel(
     }
     fun Summit(){
         viewModelScope.launch {
-            repository.AddRecode(_UIState.value.toMNPRecode())
+            repository.AddRecode(_UIState.value.toMNPRecodeWIthID())
         }
     }
 
@@ -62,6 +62,16 @@ fun MNPRecode.toRecodeUIState():RecodeUIState{
         this.VI,
         this.Airtel,
         this.UIBalance.toString(),
+        id = this.id
+    )
+}
+fun RecodeUIState.toMNPRecodeWIthID():MNPRecode{
+    return MNPRecode(
+        Data=this.data,
+        jio=this.jio,
+        VI=this.VI,
+        Airtel =this.Airtel,
+        UIBalance = this.ULBalance.toInt(),
         id = this.id
     )
 }

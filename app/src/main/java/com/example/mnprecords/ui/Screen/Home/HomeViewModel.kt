@@ -41,7 +41,7 @@ data class RecodeUIState(
     val jio :Int= 0,
     var VI:Int = 0,
     val Airtel:Int = 0,
-    val ULBalance:String ="0",
+    val ULBalance:String ="",
     var isValid:Boolean = false,
     val id:Int = 1
 )

@@ -79,15 +79,23 @@ fun EntaryBody(
     ){
         OutlinedTextField(
             value = recodeUIState.data,
-            onValueChange ={onvaluecnahe(recodeUIState.copy(data = it))}
+            onValueChange ={onvaluecnahe(recodeUIState.copy(data = it))},
+            placeholder = { Text(text = "Enter Date") },
+            modifier= modifier
+                .padding(10.dp)
+                .fillMaxWidth()
         )
         OutlinedTextField(
             value = recodeUIState.ULBalance,
             onValueChange ={onvaluecnahe(recodeUIState.copy(ULBalance = it)) },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            placeholder = { Text(text = "Enter UL Balance Amount")},
+            modifier= modifier
+                .padding(10.dp)
+                .fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(50.dp))
-        Row {
+        Row (modifier = modifier.padding(10.dp)){
             Text(text = "VI :", fontSize = 30.sp,modifier=modifier.fillMaxWidth(0.22f))
             Card {
                 Icon(
@@ -109,7 +117,7 @@ fun EntaryBody(
                 )
             }
         }
-        Row {
+        Row (modifier = modifier.padding(10.dp)){
             Text(text = "Jio :", fontSize = 30.sp,modifier=modifier.fillMaxWidth(0.22f))
             Card {
                 Icon(
@@ -126,12 +134,12 @@ fun EntaryBody(
                     imageVector = Icons.Default.KeyboardArrowDown,
                     contentDescription = "decriment",
                     modifier = modifier
-                        .clickable { onvaluecnahe(recodeUIState.copy(VI = recodeUIState.jio - 1)) }
+                        .clickable { onvaluecnahe(recodeUIState.copy(jio = recodeUIState.jio - 1)) }
                         .size(40.dp)
                 )
             }
         }
-        Row {
+        Row (modifier = modifier.padding(10.dp)){
             Text(text = "Airtel :", fontSize = 30.sp)
             Card {
                 Icon(
@@ -154,7 +162,8 @@ fun EntaryBody(
             }
         }
         Spacer(modifier = Modifier.height(30.dp))
-        Button(onClick = onSummit,modifier=modifier.fillMaxWidth()) {
+        Button(onClick = onSummit,modifier=modifier.padding(10.dp)
+            .fillMaxWidth()) {
             Text(text = "Summit")
         }
     }

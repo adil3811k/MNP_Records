@@ -110,7 +110,7 @@ fun RecodeCard(
                 horizontalArrangement = Arrangement.SpaceEvenly
             ){
                 val size = 20.sp
-                Text(text = "Jio :- ${mnpRecode.jio}", fontSize = size)
+                Text(text = "Jio :- ${mnpRecode.jio}", fontSize = size, modifier = modifier.padding(bottom = 5.dp))
                 Text(text = "Airtel :- ${mnpRecode.Airtel}", fontSize =size )
                 Text(text = "VI :- ${mnpRecode.VI}", fontSize = size)
         }
