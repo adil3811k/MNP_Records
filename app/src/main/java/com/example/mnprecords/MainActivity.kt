@@ -1,0 +1,30 @@
+package com.example.mnprecords
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import com.example.mnprecords.ui.MainApp
+import com.example.mnprecords.ui.Screen.Entry.EntryScreen
+import com.example.mnprecords.ui.Screen.Home.HomeScreen
+import com.example.mnprecords.ui.theme.MNPRecordsTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MNPRecordsTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    MainApp()
+                }
+            }
+        }
+    }
+}
+
