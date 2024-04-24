@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.mnprecords"
-        minSdk = 24
+        minSdk = 31
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -60,6 +60,7 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("androidx.compose.material:material-icons-core-android:1.6.5")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

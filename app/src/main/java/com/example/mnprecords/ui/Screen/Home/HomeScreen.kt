@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -90,8 +91,10 @@ fun RecodeCard(
         Row {
             Text(
                 text = mnpRecode.Data,
-                fontSize = 50.sp,
+                fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
                 modifier = modifier
                     .padding(start = 10.dp)
                     .fillMaxWidth(0.8f)
